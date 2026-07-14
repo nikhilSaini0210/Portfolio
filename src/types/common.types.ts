@@ -64,3 +64,12 @@ export interface Achievement {
   id: string;
   text: string;
 }
+
+export interface ContactInfoItem {
+  icon: LucideIcon;
+  label: string;
+  value: string;
+  href?: string;
+}
+
+export type SubmitStatus = "idle" | "success" | "error";
