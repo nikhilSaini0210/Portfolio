@@ -1,5 +1,6 @@
 import { NAV_LINKS } from "@/lib/constants";
 import About from "@/sections/About";
+import Experience from "@/sections/Experience";
 import Hero from "@/sections/Hero";
 import Projects from "@/sections/Projects";
 import Skills from "@/sections/Skills";
@@ -7,7 +8,7 @@ import { type FC } from "react";
 
 const HomePage: FC = () => {
   const remainingLinks = NAV_LINKS.filter(
-    (link) => !["hero", "about", "skills", "projects"].includes(link.href)
+    (link) => !["hero", "about", "skills", "projects", "experience"].includes(link.href)
   );
 
   return (
@@ -16,6 +17,7 @@ const HomePage: FC = () => {
       <About />
       <Skills />
       <Projects />
+      <Experience />
       {remainingLinks.map((link) => (
         <section
           key={link.href}

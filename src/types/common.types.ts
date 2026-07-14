@@ -41,3 +41,13 @@ export interface Project {
   liveUrl?: string;
   featured: boolean;
 }
+
+export interface ExperienceItem {
+  id: string;
+  company: string;
+  position: string;
+  duration: string;
+  location: string;
+  responsibilities: string[];
+  technologies: string[];
+}

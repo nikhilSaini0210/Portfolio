@@ -1,0 +1,68 @@
+import type { ExperienceItem } from "@/types/common.types";
+
+export const EXPERIENCE: ExperienceItem[] = [
+  {
+    id: "scoreboat-ai",
+    company: "ScoreBoat AI Learning",
+    position: "Full Stack Developer",
+    duration: "09/2025 – 05/2026",
+    location: "Remote + In-office",
+    responsibilities: [
+      "Built and deployed a full-stack SaaS platform using React (web), React Native (Android), and Node.js backend.",
+      "Designed secure authentication system (JWT + OTP) with WhatsApp & SMS fallback and fraud prevention.",
+      "Integrated Razorpay payments with webhook handling, verification, and subscription lifecycle management.",
+      "Developed PDF invoice system using PDFKit with Unicode support, branding, and secure downloads.",
+      "Built REST APIs using Node.js, Express, and MongoDB with optimized performance.",
+      "Engineered centralized API layer (Axios) with auto-refresh token and error handling.",
+      "Implemented global state management using Context API and Zustand.",
+      "Developed mobile app using React Native with MMKV for high performance storage.",
+    ],
+    technologies: ["React", "React Native", "Node.js", "MongoDB", "Razorpay", "Zustand"],
+  },
+  {
+    id: "justgetleads",
+    company: "JustGetLeads Pvt. Ltd.",
+    position: "Software Engineer",
+    duration: "04/2025 – 08/2025",
+    location: "Gurgaon, India",
+    responsibilities: [
+      "Developed responsive web apps using React.js with optimized UI/UX.",
+      "Built REST APIs with authentication and real-time updates.",
+      "Implemented chat system using Socket.io (typing indicators, real-time messaging).",
+      "Developed video/audio calling using WebRTC (1:1 and group).",
+      "Designed scalable signaling servers for low-latency communication.",
+      "Built mobile features using React Native.",
+    ],
+    technologies: ["React.js", "React Native", "Socket.io", "WebRTC"],
+  },
+  {
+    id: "fi-elements",
+    company: "Fi Elements Pvt. Ltd.",
+    position: "Software Engineer",
+    duration: "05/2024 – 03/2025",
+    location: "Noida, India",
+    responsibilities: [
+      "Led development of live streaming app using WebRTC and Socket.io.",
+      "Built Node.js backend for real-time streaming and concurrent users.",
+      "Developed React Native app (profiles, cart, wishlist).",
+      "Integrated Razorpay payments and implemented Redux + AsyncStorage.",
+      "Designed and consumed REST APIs for services and user interactions.",
+    ],
+    technologies: ["React Native", "Node.js", "WebRTC", "Socket.io", "Redux"],
+  },
+  {
+    id: "ideaexecution",
+    company: "Ideaexecution Technologies Pvt. Ltd.",
+    position: "Software Engineer",
+    duration: "03/2023 – 04/2024",
+    location: "Bhilai, India",
+    responsibilities: [
+      "Built Android TV app using React Native with optimized performance.",
+      "Developed fintech AEON Net Banking app (iOS & Android).",
+      "Implemented secure APIs for authentication and transactions.",
+      "Handled offline data storage using AsyncStorage.",
+      "Optimized performance using lazy loading and native modules.",
+    ],
+    technologies: ["React Native", "AsyncStorage", "iOS", "Android"],
+  },
+];
