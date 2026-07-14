@@ -1,3 +1,5 @@
+import type { LucideIcon } from "lucide-react";
+
 export interface SocialLink {
   platform: "github" | "linkedin" | "twitter" | "email";
   url: string;
@@ -19,4 +21,23 @@ export interface EducationItem {
   institution: string;
   duration: string;
   location: string;
+}
+
+export interface SkillCategory {
+  id: string;
+  title: string;
+  icon: LucideIcon;
+  skills: string[];
+}
+
+export interface Project {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  technologies: string[];
+  features: string[];
+  githubUrl: string;
+  liveUrl?: string;
+  featured: boolean;
 }
