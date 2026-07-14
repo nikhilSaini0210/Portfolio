@@ -4,10 +4,16 @@ import { Link } from "react-router-dom";
 import { Home } from "lucide-react";
 import Button from "@/components/ui/Button";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
+import Seo from "@/components/common/Seo";
 
 const NotFoundPage: FC = () => {
   return (
     <div className="flex min-h-[calc(100vh-4rem)] items-center justify-center px-lg">
+      <Seo
+        title="Page Not Found | Nikhil Saini"
+        path="/404"
+        description="The page you're looking for doesn't exist."
+      />
       <motion.div
         variants={staggerContainer}
         initial="hidden"
