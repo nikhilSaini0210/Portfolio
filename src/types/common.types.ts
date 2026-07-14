@@ -51,3 +51,16 @@ export interface ExperienceItem {
   responsibilities: string[];
   technologies: string[];
 }
+
+export interface Certification {
+  id: string;
+  name: string;
+  issuer: string;
+  date: string;
+  credentialUrl?: string;
+}
+
+export interface Achievement {
+  id: string;
+  text: string;
+}
