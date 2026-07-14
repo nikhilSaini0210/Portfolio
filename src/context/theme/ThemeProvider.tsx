@@ -1,8 +1,7 @@
 import type { Theme, ThemeContextValue } from "@/types/theme.types";
 import { ThemeContext } from "./ThemeContext";
 import { useCallback, useEffect, useState, type FC, type ReactNode } from "react";
-
-const THEME_STORAGE_KEY = "p-theme";
+import { THEME_STORAGE_KEY } from "@/lib/constants";
 
 const getInitialTheme = (): Theme => {
   const stored = window.localStorage.getItem(THEME_STORAGE_KEY);
