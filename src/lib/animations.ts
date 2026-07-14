@@ -30,3 +30,9 @@ export const scaleOnHover = {
   whileHover: { scale: 1.02 },
   whileTap: { scale: 0.98 },
 };
+
+export const pageTransition: Variants = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1, transition: { duration: 0.3, ease: "easeOut" } },
+  exit: { opacity: 0, transition: { duration: 0.2, ease: "easeIn" } },
+};

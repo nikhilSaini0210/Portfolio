@@ -14,7 +14,7 @@ interface ProjectCardProps {
 const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
   return (
     <motion.div variants={fadeInUp}>
-      <Card hoverEffect className="flex h-full flex-col overflow-hidden p-0">
+      <Card hoverEffect className="group flex h-full flex-col overflow-hidden p-0">
         <div className="relative aspect-video w-full overflow-hidden bg-bg-secondary">
           <img
             src={project.image}

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
 import { useScrollSpy } from "@/hooks/useScrollSpy";
 import { cn } from "@/lib/cn";
@@ -52,7 +53,11 @@ const Navbar: FC = () => {
                 >
                   {link.label}
                   {activeId === link.href && (
-                    <span className="absolute -bottom-1 left-0 h-0.5 w-full rounded-full bg-primary" />
+                    <motion.span
+                      layoutId="nav-underline"
+                      className="absolute -bottom-1 left-0 h-0.5 w-full rounded-full bg-primary"
+                      transition={{ type: "spring", stiffness: 380, bounce: 0.2, duration: 0.4 }}
+                    />
                   )}
                 </button>
               </li>
