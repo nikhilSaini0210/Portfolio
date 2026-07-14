@@ -1,13 +1,15 @@
 import { NAV_LINKS } from "@/lib/constants";
+import About from "@/sections/About";
 import Hero from "@/sections/Hero";
 import { type FC } from "react";
 
 const HomePage: FC = () => {
-  const remainingLinks = NAV_LINKS.filter((link) => link.href !== "hero");
+  const remainingLinks = NAV_LINKS.filter((link) => link.href !== "hero" && link.href !== "about");
 
   return (
     <>
       <Hero />
+      <About />
       {remainingLinks.map((link) => (
         <section
           key={link.href}
