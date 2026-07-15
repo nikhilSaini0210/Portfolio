@@ -19,7 +19,7 @@ const Projects: FC = () => {
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.15 }}
+        viewport={{ once: true, amount: 0, margin: "0px 0px -100px 0px" }}
         className="grid grid-cols-1 gap-lg lg:grid-cols-2"
       >
         {PROJECTS.map((project) => (

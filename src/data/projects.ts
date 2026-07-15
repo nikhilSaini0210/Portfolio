@@ -2,6 +2,46 @@ import type { Project } from "@/types/common.types";
 
 export const PROJECTS: Project[] = [
   {
+    id: "frijmitra",
+    title: "FrijMitra & Pantry Management System (In Progress)",
+    description:
+      "Currently building an AI-powered smart kitchen platform that helps users manage pantry inventory, track expiry dates, generate shopping lists, receive smart notifications, and discover recipes based on available ingredients. The application combines automation, OCR, barcode scanning, and AI to reduce food waste and simplify kitchen management.",
+    image: "/images/projects/smart-fridge.png",
+    technologies: [
+      "React Native",
+      "Node.js",
+      "Express.js",
+      "TypeScript",
+      "Prisma ORM",
+      "PostgreSQL",
+      "Redis",
+      "Firebase Authentication",
+      "Firebase Cloud Messaging",
+      "Google Gemini API",
+      "ML Kit OCR",
+      "Barcode Scanner",
+      "JWT",
+      "REST APIs",
+      "Zustand",
+    ],
+    features: [
+      "AI-powered recipe recommendations based on pantry ingredients",
+      "Smart pantry inventory with expiry date tracking",
+      "OCR receipt scanning for automatic grocery detection",
+      "Barcode scanning for quick product addition",
+      "Voice-based grocery item recognition using AI",
+      "Automatic shopping list generation",
+      "Real-time expiry alerts and push notifications",
+      "Household sharing with collaborative pantry management",
+      "Meal planning with AI-powered recommendations",
+      "Analytics dashboard for food consumption and waste reduction",
+    ],
+    githubUrl: "",
+    webUrl: "",
+    featured: true,
+    // status: "In Progress",
+  },
+  {
     id: "scoreboat",
     title: "ScoreBoat — AI-Powered Exam Preparation Platform",
     description:
@@ -247,6 +287,6 @@ export const PROJECTS: Project[] = [
       "Live member status tracking (online, last active)",
     ],
     githubUrl: "https://github.com/nikhilSaini0210/DYVE.git",
-    featured: true,
+    featured: false,
   },
 ];
