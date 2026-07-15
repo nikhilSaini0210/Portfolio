@@ -26,12 +26,14 @@ const config: Config = {
           hover: "var(--color-action-hover)",
         },
         accent: "var(--color-accent)",
+        onAccent: "var(--color-on-accent)",
         success: "var(--color-success)",
         warning: "var(--color-warning)",
         error: "var(--color-error)",
       },
       fontFamily: {
         sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ["Space Grotesk", "Inter", "ui-sans-serif", "system-ui", "sans-serif"],
         mono: ["JetBrains Mono", "ui-monospace", "monospace"],
       },
       spacing: {

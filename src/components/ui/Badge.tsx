@@ -21,7 +21,7 @@ const Badge: FC<BadgeProps> = ({ children, variant = "default", className }) => 
   return (
     <span
       className={cn(
-        "inline-flex items-center rounded-full border px-sm py-[2px] font-mono text-xs font-medium",
+        "inline-flex items-center rounded-md border px-sm py-[2px] font-mono text-xs font-medium",
         variantStyles[variant],
         className
       )}
