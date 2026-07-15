@@ -37,8 +37,10 @@ export interface Project {
   image: string;
   technologies: string[];
   features: string[];
-  githubUrl: string;
-  liveUrl?: string;
+  githubUrl?: string;
+  webUrl?: string;
+  androidUrl?: string;
+  iOSUrl?: string;
   featured: boolean;
 }
 

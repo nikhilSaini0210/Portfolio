@@ -3,9 +3,10 @@ import type { Project } from "@/types/common.types";
 import { motion } from "framer-motion";
 import type { FC } from "react";
 import Card from "../ui/Card";
-import { CheckCircle2, ExternalLink } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import TechBadge from "./TechBadge";
-import { FaGithub } from "react-icons/fa";
+import { FaAndroid, FaApple, FaGithub } from "react-icons/fa";
+import { HiOutlineGlobeAlt } from "react-icons/hi";
 
 interface ProjectCardProps {
   project: Project;
@@ -49,24 +50,48 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
           </div>
 
           <div className="mt-lg flex items-center gap-md border-t border-border pt-lg">
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-xs rounded-sm text-sm font-medium text-text-primary transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-            >
-              <FaGithub className="h-4 w-4" aria-hidden="true" />
-              Code
-            </a>
-            {project.liveUrl && (
+            {project.githubUrl && (
               <a
-                href={project.liveUrl}
+                href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-xs rounded-sm text-sm font-medium text-text-primary transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
               >
-                <ExternalLink className="h-4 w-4" aria-hidden="true" />
-                Live
+                <FaGithub className="h-4 w-4" aria-hidden="true" />
+                Code
+              </a>
+            )}
+            {project.webUrl && (
+              <a
+                href={project.webUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-xs rounded-sm text-sm font-medium text-text-primary transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              >
+                <HiOutlineGlobeAlt className="h-4 w-4" aria-hidden="true" />
+                Website
+              </a>
+            )}
+            {project.androidUrl && (
+              <a
+                href={project.androidUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-xs rounded-sm text-sm font-medium text-text-primary transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              >
+                <FaAndroid className="h-4 w-4" aria-hidden="true" />
+                Android
+              </a>
+            )}
+            {project.iOSUrl && (
+              <a
+                href={project.iOSUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-xs rounded-sm text-sm font-medium text-text-primary transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              >
+                <FaApple className="h-4 w-4" aria-hidden="true" />
+                iOS
               </a>
             )}
           </div>
