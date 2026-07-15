@@ -21,6 +21,10 @@ const config: Config = {
           DEFAULT: "var(--color-primary)",
           hover: "var(--color-primary-hover)",
         },
+        action: {
+          DEFAULT: "var(--color-action)",
+          hover: "var(--color-action-hover)",
+        },
         accent: "var(--color-accent)",
         success: "var(--color-success)",
         warning: "var(--color-warning)",

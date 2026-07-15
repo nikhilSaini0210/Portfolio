@@ -16,8 +16,8 @@ const ScrollToTop: FC = () => {
       aria-label="Scroll to top"
       className={cn(
         "fixed bottom-lg right-lg z-40 flex h-11 w-11 items-center justify-center rounded-full",
-        "bg-primary text-white shadow-lg transition-all duration-300",
-        "hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
+        "bg-action text-white shadow-lg transition-all duration-300",
+        "hover:bg-action-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
         visible ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-4 opacity-0"
       )}
     >

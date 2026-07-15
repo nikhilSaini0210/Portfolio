@@ -4,7 +4,7 @@ import { useScrollSpy } from "@/hooks/useScrollSpy";
 import { cn } from "@/lib/cn";
 import { NAV_LINKS, SITE_CONFIG } from "@/lib/constants";
 import { scrollToSection } from "@/lib/helpers";
-import { useState, type FC } from "react";
+import { useEffect, useState, type FC } from "react";
 import Container from "../common/Container";
 import ThemeToggle from "../ui/ThemeToggle";
 import { Menu, X } from "lucide-react";
@@ -14,10 +14,21 @@ const Navbar: FC = () => {
   const scrolled = useScrollPosition();
   const activeId = useScrollSpy(NAV_LINKS.map((link) => link.href));
 
-  function handleNavClick(href: string) {
+  const handleNavClick = (href: string) => {
     scrollToSection(href);
     setMobileOpen(false);
-  }
+  };
+
+  useEffect(() => {
+    if (!mobileOpen) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMobileOpen(false);
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [mobileOpen]);
 
   return (
     <header
@@ -74,6 +85,7 @@ const Navbar: FC = () => {
               onClick={() => setMobileOpen((prev) => !prev)}
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileOpen}
+              aria-controls="mobile-nav-panel"
               className="flex h-9 w-9 items-center justify-center rounded-full text-text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             >
               {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -83,6 +95,8 @@ const Navbar: FC = () => {
       </Container>
 
       <div
+        id="mobile-nav-panel"
+        inert={!mobileOpen ? true : undefined}
         className={cn(
           "overflow-hidden transition-all duration-300 ease-in-out md:hidden",
           mobileOpen ? "max-h-96 border-b border-border" : "max-h-0"

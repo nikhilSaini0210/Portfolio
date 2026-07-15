@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import ScrollToTop from "./ScrollToTop";
 import ScrollProgressBar from "./ScrollProgressBar";
+import SkipLink from "../common/SkipLink";
 
 interface RootLayoutProps {
   children: ReactNode;
@@ -11,9 +12,12 @@ interface RootLayoutProps {
 const RootLayout: FC<RootLayoutProps> = ({ children }) => {
   return (
     <div className="flex min-h-screen flex-col">
+      <SkipLink />
       <ScrollProgressBar />
       <Navbar />
-      <main className="flex-1 pt-16">{children}</main>
+      <main id="main-content" className="flex-1 pt-16">
+        {children}
+      </main>
       <Footer />
       <ScrollToTop />
     </div>

@@ -10,7 +10,7 @@ const EducationCard: FC<EducationItem> = ({ degree, institution, duration, locat
         <GraduationCap className="h-5 w-5" aria-hidden="true" />
       </div>
       <div>
-        <h4 className="font-semibold text-text-primary">{degree}</h4>
+        <h3 className="font-semibold text-text-primary">{degree}</h3>
         <p className="mt-[2px] text-sm text-text-secondary">{institution}</p>
         <p className="mt-[2px] font-mono text-xs text-text-muted">
           {duration} · {location}

@@ -34,7 +34,7 @@ const ResumePreview: FC = () => {
         </div>
 
         <div className="bg-bg-primary/0 group-hover:bg-bg-primary/60 absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-200 group-hover:opacity-100">
-          <span className="rounded-full bg-primary px-lg py-sm text-sm font-semibold text-white shadow-lg">
+          <span className="rounded-full bg-action px-lg py-sm text-sm font-semibold text-white shadow-lg">
             View Full Preview
           </span>
         </div>

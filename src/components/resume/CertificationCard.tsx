@@ -10,7 +10,7 @@ const CertificationCard: FC<Certification> = ({ name, issuer, date, credentialUr
         <BadgeCheck className="h-5 w-5" aria-hidden="true" />
       </div>
       <div className="flex-1">
-        <h4 className="font-semibold text-text-primary">{name}</h4>
+        <h3 className="font-semibold text-text-primary">{name}</h3>
         <p className="mt-[2px] text-sm text-text-secondary">{issuer}</p>
         <p className="mt-[2px] font-mono text-xs text-text-muted">{date}</p>
         {credentialUrl && (

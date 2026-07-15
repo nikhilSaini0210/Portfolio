@@ -12,10 +12,13 @@ const HeroAvatar: FC = () => {
       <div className="absolute inset-0 animate-pulse rounded-full bg-gradient-to-br from-primary to-accent opacity-30 blur-xl" />
       <div className="relative h-full w-full overflow-hidden rounded-full border-4 border-surface shadow-lg">
         <img
-          src="/images/profile.jpg"
+          src="/images/profile.webp"
           alt="Nikhil Saini"
           className="h-full w-full object-cover"
           loading="eager"
+          width={400}
+          height={400}
+          fetchPriority="high"
         />
       </div>
       <div className="absolute -bottom-1 -right-1 flex h-8 w-8 items-center justify-center rounded-full border-4 border-bg-primary bg-success">
