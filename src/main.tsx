@@ -8,6 +8,8 @@ import { BrowserRouter } from "react-router-dom";
 import { MotionConfig } from "framer-motion";
 import { Analytics } from "@vercel/analytics/react";
 
+import("@/styles/fonts.css");
+
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <HelmetProvider>
