@@ -12,7 +12,6 @@ import ScrollIndicator from "@/components/hero/ScrollIndicator";
 import HeroAvatar from "@/components/hero/HeroAvatar";
 import MagneticButton from "@/components/ui/MagneticButton";
 import ParticleField from "@/components/hero/ParticleField";
-import BurstLayer from "@/components/common/BurstLayer";
 
 const Hero: FC = () => {
   return (
@@ -99,7 +98,6 @@ const Hero: FC = () => {
       </Container>
 
       <ScrollIndicator />
-      <BurstLayer />
     </section>
   );
 };

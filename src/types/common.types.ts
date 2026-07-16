@@ -77,17 +77,12 @@ export interface ContactInfoItem {
 
 export type SubmitStatus = "idle" | "success" | "error";
 
-export interface RippleSpot {
+export interface BurstParticle {
   x: number;
   y: number;
+  vx: number;
+  vy: number;
+  life: number;
+  maxLife: number;
   size: number;
-  id: number;
 }
-
-export interface Burst {
-  x: number;
-  y: number;
-  id: number;
-}
-
-export type BurstOrigin = MouseEvent | { x: number; y: number };
