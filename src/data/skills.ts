@@ -39,3 +39,18 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     skills: ["AWS", "Firebase (Auth, FCM)", "Git", "Bitbucket", "Postman", "Axios"],
   },
 ];
+
+export const TECH_STACK = [
+  "React",
+  "React Native",
+  "Node.js",
+  "TypeScript",
+  "MongoDB",
+  "Redis",
+  "Socket.io",
+  "WebRTC",
+  "Razorpay",
+  "Firebase",
+  "AWS",
+  "Express.js",
+];

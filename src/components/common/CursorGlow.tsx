@@ -30,10 +30,10 @@ const CursorGlow: FC = () => {
     <div
       ref={glowRef}
       aria-hidden="true"
-      className="pointer-events-none fixed left-0 top-0 z-[1] h-[500px] w-[500px] rounded-full opacity-0 mix-blend-screen transition-opacity duration-500 will-change-transform md:opacity-100"
+      className="pointer-events-none fixed left-0 top-0 z-[1] h-[500px] w-[500px] rounded-full opacity-0 mix-blend-multiply transition-opacity duration-500 will-change-transform dark:mix-blend-screen md:opacity-100"
       style={{
         background:
-          "radial-gradient(circle, color-mix(in srgb, var(--color-primary) 12%, transparent) 0%, transparent 70%)",
+          "radial-gradient(circle, color-mix(in srgb, var(--color-primary) 18%, transparent) 0%, transparent 70%)",
       }}
     />
   );

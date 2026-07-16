@@ -1,6 +1,7 @@
 import SectionDivider from "@/components/common/SectionDivider";
 import Seo from "@/components/common/Seo";
 import StructuredData from "@/components/common/StructuredData";
+import TechMarquee from "@/components/skills/TechMarquee";
 import About from "@/sections/About";
 import Contact from "@/sections/Contact";
 import Experience from "@/sections/Experience";
@@ -20,6 +21,7 @@ const HomePage: FC = () => {
       <About />
       <SectionDivider />
       <Skills />
+      <TechMarquee />
       <SectionDivider />
       <Projects />
       <SectionDivider />

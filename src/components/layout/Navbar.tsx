@@ -66,7 +66,7 @@ const Navbar: FC = () => {
                   {activeId === link.href && (
                     <motion.span
                       layoutId="nav-underline"
-                      className="absolute -bottom-1 left-0 h-0.5 w-full rounded-full bg-primary"
+                      className="absolute -bottom-1 left-0 h-0.5 w-full rounded-full bg-gradient-to-r from-primary to-accent shadow-[0_0_8px_var(--color-primary)]"
                       transition={{ type: "spring", stiffness: 380, bounce: 0.2, duration: 0.4 }}
                     />
                   )}
