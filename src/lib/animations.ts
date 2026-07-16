@@ -36,3 +36,18 @@ export const pageTransition: Variants = {
   animate: { opacity: 1, transition: { duration: 0.3, ease: "easeOut" } },
   exit: { opacity: 0, transition: { duration: 0.2, ease: "easeIn" } },
 };
+
+export const slideInLeft: Variants = {
+  hidden: { opacity: 0, x: -40 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.45, ease: "easeOut" } },
+};
+
+export const slideInRight: Variants = {
+  hidden: { opacity: 0, x: 40 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.45, ease: "easeOut" } },
+};
+
+export const revealScale: Variants = {
+  hidden: { opacity: 0, scale: 0.92 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] } },
+};

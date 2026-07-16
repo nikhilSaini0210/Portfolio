@@ -76,3 +76,18 @@ export interface ContactInfoItem {
 }
 
 export type SubmitStatus = "idle" | "success" | "error";
+
+export interface RippleSpot {
+  x: number;
+  y: number;
+  size: number;
+  id: number;
+}
+
+export interface Burst {
+  x: number;
+  y: number;
+  id: number;
+}
+
+export type BurstOrigin = MouseEvent | { x: number; y: number };

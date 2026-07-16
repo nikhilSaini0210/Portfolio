@@ -4,7 +4,7 @@ import StatCard from "@/components/about/StatCard";
 import Section from "@/components/common/Section";
 import SectionTitle from "@/components/common/SectionTitle";
 import { ABOUT_INTRO, ABOUT_STATS, EDUCATION, INTERESTS } from "@/data/about";
-import { fadeInUp, staggerContainer } from "@/lib/animations";
+import { slideInLeft, slideInRight, staggerContainer } from "@/lib/animations";
 import { motion } from "framer-motion";
 import type { FC } from "react";
 
@@ -24,14 +24,14 @@ const About: FC = () => {
           {ABOUT_INTRO.paragraphs.map((paragraph, index) => (
             <motion.p
               key={index}
-              variants={fadeInUp}
+              variants={slideInLeft}
               className="mb-md text-base leading-relaxed text-text-secondary sm:text-lg"
             >
               {paragraph}
             </motion.p>
           ))}
 
-          <motion.div variants={fadeInUp} className="mt-lg">
+          <motion.div variants={slideInLeft} className="mt-lg">
             <h3 className="mb-sm text-sm font-semibold uppercase tracking-wide text-text-muted">
               Areas of Interest
             </h3>
@@ -46,7 +46,7 @@ const About: FC = () => {
           viewport={{ once: true, amount: 0.2 }}
           className="flex flex-col gap-lg lg:col-span-2"
         >
-          <motion.div variants={fadeInUp}>
+          <motion.div variants={slideInRight}>
             <h3 className="mb-sm text-sm font-semibold uppercase tracking-wide text-text-muted">
               Education
             </h3>

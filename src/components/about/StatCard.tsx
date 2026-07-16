@@ -1,8 +1,8 @@
+import { useCountUp } from "@/hooks/useCountUp";
 import { fadeInUp } from "@/lib/animations";
 import type { Stat } from "@/types/common.types";
 import { motion } from "framer-motion";
 import type { FC } from "react";
-import { useCountUp } from "../common/useCountUp";
 
 const StatCard: FC<Stat> = ({ label, value, suffix }) => {
   const isDecimal = !Number.isInteger(value);

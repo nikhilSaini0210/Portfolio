@@ -5,7 +5,6 @@ import ScrollToTop from "./ScrollToTop";
 import ScrollProgressBar from "./ScrollProgressBar";
 import SkipLink from "../common/SkipLink";
 import CursorGlow from "../common/CursorGlow";
-import GrainOverlay from "../common/GrainOverlay";
 
 interface RootLayoutProps {
   children: ReactNode;
@@ -14,7 +13,6 @@ interface RootLayoutProps {
 const RootLayout: FC<RootLayoutProps> = ({ children }) => {
   return (
     <div className="relative flex min-h-screen flex-col">
-      <GrainOverlay />
       <CursorGlow />
       <SkipLink />
       <ScrollProgressBar />

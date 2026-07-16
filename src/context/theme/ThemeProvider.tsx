@@ -17,8 +17,45 @@ const ThemeProvider: FC<{ children: ReactNode }> = ({ children }) => {
     window.localStorage.setItem(THEME_STORAGE_KEY, theme);
   }, [theme]);
 
-  const toggleTheme = useCallback(() => {
-    setTheme((p) => (p === "light" ? "dark" : "light"));
+  const toggleTheme = useCallback((origin?: { x: number; y: number }) => {
+    const flip = () => setTheme((p) => (p === "light" ? "dark" : "light"));
+
+    const supportsViewTransition =
+      typeof document !== "undefined" &&
+      "startViewTransition" in document &&
+      !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (!supportsViewTransition || !origin) {
+      flip();
+      return;
+    }
+
+    const x = origin.x;
+    const y = origin.y;
+
+    const radius = Math.hypot(
+      Math.max(x, window.innerWidth - x),
+      Math.max(y, window.innerHeight - y)
+    );
+
+    const transition = (
+      document as Document & {
+        startViewTransition: (cb: () => void) => { ready: Promise<void> };
+      }
+    ).startViewTransition(flip);
+
+    transition.ready.then(() => {
+      document.documentElement.animate(
+        {
+          clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${radius}px at ${x}px ${y}px)`],
+        },
+        {
+          duration: 550,
+          easing: "ease-in-out",
+          pseudoElement: "::view-transition-new(root)",
+        }
+      );
+    });
   }, []);
 
   const value: ThemeContextValue = {

@@ -12,6 +12,7 @@ import ScrollIndicator from "@/components/hero/ScrollIndicator";
 import HeroAvatar from "@/components/hero/HeroAvatar";
 import MagneticButton from "@/components/ui/MagneticButton";
 import ParticleField from "@/components/hero/ParticleField";
+import BurstLayer from "@/components/common/BurstLayer";
 
 const Hero: FC = () => {
   return (
@@ -61,7 +62,13 @@ const Hero: FC = () => {
             className="flex flex-wrap items-center justify-center gap-md"
           >
             <MagneticButton>
-              <Button variant="primary" size="lg" onClick={() => scrollToSection("projects")}>
+              <Button
+                variant="primary"
+                size="lg"
+                onClick={() => {
+                  scrollToSection("projects");
+                }}
+              >
                 View Projects
               </Button>
             </MagneticButton>
@@ -92,6 +99,7 @@ const Hero: FC = () => {
       </Container>
 
       <ScrollIndicator />
+      <BurstLayer />
     </section>
   );
 };

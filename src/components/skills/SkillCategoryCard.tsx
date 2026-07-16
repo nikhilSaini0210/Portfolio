@@ -1,4 +1,4 @@
-import { fadeInUp } from "@/lib/animations";
+import { revealScale } from "@/lib/animations";
 import type { SkillCategory } from "@/types/common.types";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useRef, type FC, type MouseEvent } from "react";
@@ -33,7 +33,7 @@ const SkillCategoryCard: FC<SkillCategory> = ({ title, icon: Icon, skills }) => 
   };
 
   return (
-    <motion.div variants={fadeInUp} style={{ perspective: 800 }}>
+    <motion.div variants={revealScale} style={{ perspective: 800 }}>
       <motion.div
         ref={cardRef}
         onMouseMove={handleMouseMove}
@@ -41,7 +41,6 @@ const SkillCategoryCard: FC<SkillCategory> = ({ title, icon: Icon, skills }) => 
         style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
         className="group relative h-full overflow-hidden rounded-lg border border-border bg-surface p-lg shadow-sm transition-shadow duration-300 hover:shadow-xl"
       >
-        {/* Cursor-tracked glow */}
         <motion.div
           className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
           style={{
