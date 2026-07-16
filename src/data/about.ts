@@ -1,10 +1,10 @@
 import type { EducationItem, Stat } from "@/types/common.types";
 
 export const ABOUT_STATS: Stat[] = [
-  { label: "Years of Experience", value: "2.5+" },
-  { label: "Companies Worked With", value: "4" },
-  { label: "Projects Delivered", value: "6+" },
-  { label: "Core Technologies", value: "15+" },
+  { label: "Years of Experience", value: 2.8, suffix: "+" },
+  { label: "Companies Worked With", value: 4, suffix: "" },
+  { label: "Projects Delivered", value: 6, suffix: "+" },
+  { label: "Core Technologies", value: 15, suffix: "+" },
 ];
 
 export const EDUCATION: EducationItem[] = [

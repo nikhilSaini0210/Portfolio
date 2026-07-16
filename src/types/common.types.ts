@@ -13,7 +13,8 @@ export interface NavLink {
 
 export interface Stat {
   label: string;
-  value: string;
+  value: number;
+  suffix?: string;
 }
 
 export interface EducationItem {

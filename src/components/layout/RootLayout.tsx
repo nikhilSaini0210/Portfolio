@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import ScrollToTop from "./ScrollToTop";
 import ScrollProgressBar from "./ScrollProgressBar";
 import SkipLink from "../common/SkipLink";
+import CursorGlow from "../common/CursorGlow";
 
 interface RootLayoutProps {
   children: ReactNode;
@@ -11,7 +12,8 @@ interface RootLayoutProps {
 
 const RootLayout: FC<RootLayoutProps> = ({ children }) => {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="relative flex min-h-screen flex-col">
+      <CursorGlow />
       <SkipLink />
       <ScrollProgressBar />
       <Navbar />

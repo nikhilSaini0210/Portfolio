@@ -1,3 +1,4 @@
+import SectionDivider from "@/components/common/SectionDivider";
 import Seo from "@/components/common/Seo";
 import StructuredData from "@/components/common/StructuredData";
 import About from "@/sections/About";
@@ -15,11 +16,17 @@ const HomePage: FC = () => {
       <Seo path="/" />
       <StructuredData />
       <Hero />
+      <SectionDivider />
       <About />
+      <SectionDivider />
       <Skills />
+      <SectionDivider />
       <Projects />
+      <SectionDivider />
       <Experience />
+      <SectionDivider />
       <Resume />
+      <SectionDivider />
       <Contact />
     </>
   );
