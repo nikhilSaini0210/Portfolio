@@ -23,7 +23,12 @@ const Experience: FC = () => {
         className="mx-auto max-w-3xl"
       >
         {EXPERIENCE.map((item, index) => (
-          <TimelineItem key={item.id} item={item} isLast={index === EXPERIENCE.length - 1} />
+          <TimelineItem
+            key={item.id}
+            index={index}
+            item={item}
+            isLast={index === EXPERIENCE.length - 1}
+          />
         ))}
       </motion.div>
     </Section>

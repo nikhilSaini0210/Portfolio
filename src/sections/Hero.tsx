@@ -11,11 +11,13 @@ import SocialIcons from "@/components/common/SocialIcons";
 import ScrollIndicator from "@/components/hero/ScrollIndicator";
 import HeroAvatar from "@/components/hero/HeroAvatar";
 import MagneticButton from "@/components/ui/MagneticButton";
+import ParticleField from "@/components/hero/ParticleField";
 
 const Hero: FC = () => {
   return (
     <section id="hero" className="relative flex min-h-screen items-center overflow-hidden pt-16">
       <HeroBackground />
+      <ParticleField />
 
       <Container className="relative z-10">
         <motion.div
@@ -50,7 +52,7 @@ const Hero: FC = () => {
           </motion.p>
 
           <motion.p variants={fadeInUp} className="max-w-xl text-base text-text-muted sm:text-lg">
-            2.5+ years building scalable SaaS platforms, real-time systems, and fintech applications
+            2.8+ years building scalable SaaS platforms, real-time systems, and fintech applications
             with Node.js, React.js, and React Native.
           </motion.p>
 
