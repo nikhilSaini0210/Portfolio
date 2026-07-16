@@ -26,7 +26,7 @@ const config: Config = {
           hover: "var(--color-action-hover)",
         },
         accent: "var(--color-accent)",
-        onAccent: "var(--color-on-accent)",
+        "on-accent": "var(--color-on-accent)",
         success: "var(--color-success)",
         warning: "var(--color-warning)",
         error: "var(--color-error)",
@@ -51,6 +51,17 @@ const config: Config = {
         md: "10px",
         lg: "16px",
         xl: "24px",
+      },
+      animation: {
+        "spin-slow": "spin 20s linear infinite",
+        float: "float 6s ease-in-out infinite",
+        "float-delayed": "float 6s ease-in-out 2s infinite",
+      },
+      keyframes: {
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-16px)" },
+        },
       },
     },
   },

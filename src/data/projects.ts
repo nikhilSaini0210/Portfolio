@@ -6,7 +6,11 @@ export const PROJECTS: Project[] = [
     title: "FrijMitra & Pantry Management System (In Progress)",
     description:
       "Currently building an AI-powered smart kitchen platform that helps users manage pantry inventory, track expiry dates, generate shopping lists, receive smart notifications, and discover recipes based on available ingredients. The application combines automation, OCR, barcode scanning, and AI to reduce food waste and simplify kitchen management.",
-    image: "/images/projects/smart-fridge.png",
+    images: [
+      "/images/projects/smart-fridge.png",
+      "/images/projects/smart-fridge.png",
+      "/images/projects/smart-fridge.png",
+    ],
     technologies: [
       "React Native",
       "Node.js",
@@ -46,7 +50,11 @@ export const PROJECTS: Project[] = [
     title: "ScoreBoat — AI-Powered Exam Preparation Platform",
     description:
       "A full-stack SaaS platform for competitive exam preparation (JEE, NEET, CAT, GATE, UPSC), featuring AI-generated mock tests, adaptive difficulty, flashcards, and real-time percentile leaderboards. Built across React (web), React Native (Android), and a Node.js backend, with secure payments and authentication.",
-    image: "/images/projects/scoreboat.png",
+    images: [
+      "/images/projects/scoreboat.png",
+      "/images/projects/scoreboat.png",
+      "/images/projects/scoreboat.png",
+    ],
     technologies: [
       "React",
       "React Native",
@@ -93,7 +101,11 @@ export const PROJECTS: Project[] = [
     title: "JamRack — Live Streaming Music Platform",
     description:
       "A live streaming platform connecting musicians and fans in real time. Artists host live shows and jam sessions while fans discover new talent, chat during streams, and unlock tiered ticketed experiences — built end-to-end across web, Android, and iOS.",
-    image: "/images/projects/jamrack.png",
+    images: [
+      "/images/projects/jamrack.png",
+      "/images/projects/jamrack.png",
+      "/images/projects/jamrack.png",
+    ],
     technologies: [
       "React Native",
       "React",
@@ -126,7 +138,11 @@ export const PROJECTS: Project[] = [
     title: "PetCare — Pet Health & Care Companion",
     description:
       "A mobile app that helps pet owners manage their dog's or cat's complete care routine in one place — health records, grooming schedules, vaccination reminders, feeding, medicine, and expense tracking, with offline emergency guidance built in.",
-    image: "/images/projects/petcare.png",
+    images: [
+      "/images/projects/petcare.png",
+      "/images/projects/petcare.png",
+      "/images/projects/petcare.png",
+    ],
     technologies: [
       "React Native",
       "Redux Toolkit",
@@ -160,7 +176,7 @@ export const PROJECTS: Project[] = [
     title: "BMDb.fun — Bollywood Movie Database TV App",
     description:
       "A Bollywood movie discovery and streaming-link platform built for Android TV, web, and mobile. Lets users search movies by actor, director, or year, and jump straight to where each film is streaming across major OTT platforms — eliminating the need to search app by app.",
-    image: "/images/projects/bmdb.png",
+    images: ["/images/projects/bmdb.png", "/images/projects/bmdb.png", "/images/projects/bmdb.png"],
     technologies: [
       "React Native (TVOS)",
       "React Navigation",
@@ -194,7 +210,7 @@ export const PROJECTS: Project[] = [
     title: "AEON Bank — Islamic Digital Banking App",
     description:
       "A React Native mobile banking application for AEON Bank, Malaysia's first Islamic digital bank. Contributed to the UI layer and API integrations for core banking features, and built native modules in Java (Android Studio) and Objective-C (Xcode) for secure face recognition authentication.",
-    image: "/images/projects/aeon.png",
+    images: ["/images/projects/aeon.png", "/images/projects/aeon.png", "/images/projects/aeon.png"],
     technologies: [
       "React Native",
       "JavaScript",
@@ -222,7 +238,7 @@ export const PROJECTS: Project[] = [
     title: "NEMO — AI-Powered Document Collaboration Suite",
     description:
       "A modern cloud-based productivity platform inspired by Google Workspace, featuring collaborative document editing, spreadsheets, e-signatures, AI-powered document generation, document sharing, notifications, and secure authentication. Built with React, Redux Toolkit, and Vite for a fast and scalable user experience.",
-    image: "/images/projects/nemo.png",
+    images: ["/images/projects/nemo.png", "/images/projects/nemo.png", "/images/projects/nemo.png"],
     technologies: [
       "React",
       "Vite",
@@ -264,7 +280,11 @@ export const PROJECTS: Project[] = [
     title: "DyveChat — Team Workspace & Messaging Platform",
     description:
       "A Slack-style team communication platform with workspaces, channels, direct messaging, and role-based member management. Includes a dedicated admin panel for managing workspaces, users, channels, and permissions across the organization.",
-    image: "/images/projects/dyvechat.png",
+    images: [
+      "/images/projects/dyvechat.png",
+      "/images/projects/dyvechat.png",
+      "/images/projects/dyvechat.png",
+    ],
     technologies: [
       "React",
       "Redux Toolkit",

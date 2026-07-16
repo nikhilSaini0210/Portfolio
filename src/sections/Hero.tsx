@@ -10,6 +10,7 @@ import { Download, Mail } from "lucide-react";
 import SocialIcons from "@/components/common/SocialIcons";
 import ScrollIndicator from "@/components/hero/ScrollIndicator";
 import HeroAvatar from "@/components/hero/HeroAvatar";
+import MagneticButton from "@/components/ui/MagneticButton";
 
 const Hero: FC = () => {
   return (
@@ -57,9 +58,11 @@ const Hero: FC = () => {
             variants={fadeInUp}
             className="flex flex-wrap items-center justify-center gap-md"
           >
-            <Button variant="primary" size="lg" onClick={() => scrollToSection("projects")}>
-              View Projects
-            </Button>
+            <MagneticButton>
+              <Button variant="primary" size="lg" onClick={() => scrollToSection("projects")}>
+                View Projects
+              </Button>
+            </MagneticButton>
             <Button variant="secondary" size="lg" onClick={() => scrollToSection("contact")}>
               <Mail className="h-4 w-4" aria-hidden="true" />
               Get In Touch

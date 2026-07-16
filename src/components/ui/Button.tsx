@@ -13,7 +13,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const variantStyles: Record<ButtonVariant, string> = {
-  primary: "bg-action text-onAccent hover:bg-action-hover shadow-sm hover:shadow-md",
+  primary: "bg-action text-on-accent hover:bg-action-hover shadow-sm hover:shadow-md",
   secondary: "bg-transparent border border-accent text-accent hover:bg-accent/10",
   ghost: "bg-transparent text-text-primary hover:bg-bg-secondary",
 };
