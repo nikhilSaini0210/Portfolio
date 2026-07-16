@@ -74,6 +74,14 @@ h3 {
   z-index: 2;
 }
 
+:root.vt-reverse::view-transition-old(root) {
+  z-index: 2;
+}
+
+:root.vt-reverse::view-transition-new(root) {
+  z-index: 1;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
