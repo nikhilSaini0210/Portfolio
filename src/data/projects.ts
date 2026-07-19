@@ -7,9 +7,9 @@ export const PROJECTS: Project[] = [
     description:
       "Currently building an AI-powered smart kitchen platform that helps users manage pantry inventory, track expiry dates, generate shopping lists, receive smart notifications, and discover recipes based on available ingredients. The application combines automation, OCR, barcode scanning, and AI to reduce food waste and simplify kitchen management.",
     images: [
-      "/images/projects/smart-fridge.png",
-      "/images/projects/smart-fridge.png",
-      "/images/projects/smart-fridge.png",
+      "/images/projects/frij1.png",
+      "/images/projects/frij2.png",
+      "/images/projects/frij3.png",
     ],
     technologies: [
       "React Native",
@@ -19,6 +19,7 @@ export const PROJECTS: Project[] = [
       "Prisma ORM",
       "PostgreSQL",
       "Redis",
+      "REST APIs Integration",
       "Firebase Authentication",
       "Firebase Cloud Messaging",
       "Google Gemini API",
@@ -52,8 +53,8 @@ export const PROJECTS: Project[] = [
       "A full-stack SaaS platform for competitive exam preparation (JEE, NEET, CAT, GATE, UPSC), featuring AI-generated mock tests, adaptive difficulty, flashcards, and real-time percentile leaderboards. Built across React (web), React Native (Android), and a Node.js backend, with secure payments and authentication.",
     images: [
       "/images/projects/scoreboat.png",
-      "/images/projects/scoreboat.png",
-      "/images/projects/scoreboat.png",
+      "/images/projects/scoreboat1.png",
+      "/images/projects/scoreboat2.png",
     ],
     technologies: [
       "React",
@@ -103,8 +104,8 @@ export const PROJECTS: Project[] = [
       "A live streaming platform connecting musicians and fans in real time. Artists host live shows and jam sessions while fans discover new talent, chat during streams, and unlock tiered ticketed experiences — built end-to-end across web, Android, and iOS.",
     images: [
       "/images/projects/jamrack.png",
-      "/images/projects/jamrack.png",
-      "/images/projects/jamrack.png",
+      "/images/projects/jamrack1.png",
+      "/images/projects/jamrack2.png",
     ],
     technologies: [
       "React Native",
@@ -140,8 +141,8 @@ export const PROJECTS: Project[] = [
       "A mobile app that helps pet owners manage their dog's or cat's complete care routine in one place — health records, grooming schedules, vaccination reminders, feeding, medicine, and expense tracking, with offline emergency guidance built in.",
     images: [
       "/images/projects/petcare.png",
-      "/images/projects/petcare.png",
-      "/images/projects/petcare.png",
+      // "/images/projects/petcare.png",
+      // "/images/projects/petcare.png",
     ],
     technologies: [
       "React Native",
@@ -176,7 +177,11 @@ export const PROJECTS: Project[] = [
     title: "BMDb.fun — Bollywood Movie Database TV App",
     description:
       "A Bollywood movie discovery and streaming-link platform built for Android TV, web, and mobile. Lets users search movies by actor, director, or year, and jump straight to where each film is streaming across major OTT platforms — eliminating the need to search app by app.",
-    images: ["/images/projects/bmdb.png", "/images/projects/bmdb.png", "/images/projects/bmdb.png"],
+    images: [
+      "/images/projects/bmdb.png",
+      "/images/projects/bmdb1.png",
+      "/images/projects/bmdb2.png",
+    ],
     technologies: [
       "React Native (TVOS)",
       "React Navigation",
@@ -202,7 +207,7 @@ export const PROJECTS: Project[] = [
     githubUrl: "https://github.com/nikhilSaini0210/Android-tv-app.git",
     androidUrl:
       "https://play.google.com/store/apps/details?id=com.ideaxecution.bmdb&pcampaignid=web_share",
-    webUrl: "https://ideaxecution.com/bmdb/",
+    // webUrl: "https://ideaxecution.com/bmdb/",
     featured: false,
   },
   {
@@ -210,7 +215,11 @@ export const PROJECTS: Project[] = [
     title: "AEON Bank — Islamic Digital Banking App",
     description:
       "A React Native mobile banking application for AEON Bank, Malaysia's first Islamic digital bank. Contributed to the UI layer and API integrations for core banking features, and built native modules in Java (Android Studio) and Objective-C (Xcode) for secure face recognition authentication.",
-    images: ["/images/projects/aeon.png", "/images/projects/aeon.png", "/images/projects/aeon.png"],
+    images: [
+      "/images/projects/aeon1.png",
+      "/images/projects/aeon2.png",
+      "/images/projects/aeon3.png",
+    ],
     technologies: [
       "React Native",
       "JavaScript",
@@ -227,7 +236,7 @@ export const PROJECTS: Project[] = [
       "Cross-platform native module bridging between React Native and platform-specific code",
     ],
     // githubUrl: "https://github.com/nikhilSaini0210/JamRack-App.git",
-    webUrl: "https://www.aeonbank.com.my/",
+    // webUrl: "https://www.aeonbank.com.my/",
     androidUrl:
       "https://play.google.com/store/apps/details?id=com.personal.adb&pcampaignid=web_share",
     iOSUrl: "https://apps.apple.com/my/app/aeon-bank/id6469771768",
@@ -238,7 +247,11 @@ export const PROJECTS: Project[] = [
     title: "NEMO — AI-Powered Document Collaboration Suite",
     description:
       "A modern cloud-based productivity platform inspired by Google Workspace, featuring collaborative document editing, spreadsheets, e-signatures, AI-powered document generation, document sharing, notifications, and secure authentication. Built with React, Redux Toolkit, and Vite for a fast and scalable user experience.",
-    images: ["/images/projects/nemo.png", "/images/projects/nemo.png", "/images/projects/nemo.png"],
+    images: [
+      "/images/projects/nemo.png",
+      // "/images/projects/nemo.png",
+      //  "/images/projects/nemo.png"
+    ],
     technologies: [
       "React",
       "Vite",
@@ -282,8 +295,8 @@ export const PROJECTS: Project[] = [
       "A Slack-style team communication platform with workspaces, channels, direct messaging, and role-based member management. Includes a dedicated admin panel for managing workspaces, users, channels, and permissions across the organization.",
     images: [
       "/images/projects/dyvechat.png",
-      "/images/projects/dyvechat.png",
-      "/images/projects/dyvechat.png",
+      // "/images/projects/dyvechat.png",
+      // "/images/projects/dyvechat.png",
     ],
     technologies: [
       "React",
