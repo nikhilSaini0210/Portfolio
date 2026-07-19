@@ -12,6 +12,7 @@ import ScrollIndicator from "@/components/hero/ScrollIndicator";
 import HeroAvatar from "@/components/hero/HeroAvatar";
 import MagneticButton from "@/components/ui/MagneticButton";
 import ParticleField from "@/components/hero/ParticleField";
+import SplitText from "@/components/hero/SplitText";
 
 const Hero: FC = () => {
   return (
@@ -39,9 +40,12 @@ const Hero: FC = () => {
 
           <motion.h1
             variants={fadeInUp}
-            className="text-4xl font-extrabold leading-tight text-text-primary sm:text-5xl lg:text-6xl"
+            className="font-display text-4xl font-bold leading-[1.05] text-text-primary sm:text-5xl lg:text-6xl"
           >
-            Hi, I&apos;m <span className="text-primary">{SITE_CONFIG.name}</span>
+            Hi, I&apos;m{" "}
+            <span className="bg-gradient-to-r from-primary via-primary to-accent bg-clip-text text-transparent">
+              <SplitText text={SITE_CONFIG.name} delay={0.6} />
+            </span>
           </motion.h1>
 
           <motion.p

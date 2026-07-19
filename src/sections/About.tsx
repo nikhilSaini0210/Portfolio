@@ -1,77 +1,59 @@
-import EducationCard from "@/components/about/EducationCard";
-import InterestList from "@/components/about/InterestList";
-import StatCard from "@/components/about/StatCard";
+import { motion } from "framer-motion";
 import Section from "@/components/common/Section";
 import SectionTitle from "@/components/common/SectionTitle";
-import { ABOUT_INTRO, ABOUT_STATS, EDUCATION, INTERESTS } from "@/data/about";
-import { slideInLeft, slideInRight, staggerContainer } from "@/lib/animations";
-import { motion } from "framer-motion";
-import type { FC } from "react";
+import StatCard from "@/components/about/StatCard";
+import EducationCard from "@/components/about/EducationCard";
+import InterestList from "@/components/about/InterestList";
+import { ABOUT_STATS, EDUCATION, ABOUT_INTRO, INTERESTS } from "@/data/about";
+import { fadeInUp, staggerContainer } from "@/lib/animations";
 
-const About: FC = () => {
+function About() {
   return (
     <Section id="about">
       <SectionTitle label="About Me" title="Get to know me a little better" />
-
-      <div className="grid grid-cols-1 gap-2xl lg:grid-cols-5">
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          className="lg:col-span-3"
-        >
-          {ABOUT_INTRO.paragraphs.map((paragraph, index) => (
-            <motion.p
-              key={index}
-              variants={slideInLeft}
-              className="mb-md text-base leading-relaxed text-text-secondary sm:text-lg"
-            >
-              {paragraph}
-            </motion.p>
-          ))}
-
-          <motion.div variants={slideInLeft} className="mt-lg">
-            <h3 className="mb-sm text-sm font-semibold uppercase tracking-wide text-text-muted">
-              Areas of Interest
-            </h3>
-            <InterestList interests={INTERESTS} />
-          </motion.div>
-        </motion.div>
-
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          className="flex flex-col gap-lg lg:col-span-2"
-        >
-          <motion.div variants={slideInRight}>
-            <h3 className="mb-sm text-sm font-semibold uppercase tracking-wide text-text-muted">
-              Education
-            </h3>
-            <div className="flex flex-col gap-md">
-              {EDUCATION.map((item) => (
-                <EducationCard key={item.institution} {...item} />
-              ))}
-            </div>
-          </motion.div>
-        </motion.div>
-      </div>
 
       <motion.div
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        className="mt-2xl grid grid-cols-2 gap-md sm:grid-cols-4"
+        viewport={{ once: true, amount: 0.15 }}
+        className="grid grid-cols-1 gap-md md:grid-cols-6 md:grid-rows-[auto_auto]"
       >
-        {ABOUT_STATS.map((stat) => (
-          <StatCard key={stat.label} {...stat} />
-        ))}
+        {/* Bio — spans wide */}
+        <motion.div
+          variants={fadeInUp}
+          className="rounded-lg border border-border bg-surface p-lg shadow-sm md:col-span-4 md:row-span-2"
+        >
+          {ABOUT_INTRO.paragraphs.map((paragraph, index) => (
+            <p
+              key={index}
+              className="mb-md text-base leading-relaxed text-text-secondary last:mb-0 sm:text-lg"
+            >
+              {paragraph}
+            </p>
+          ))}
+          <div className="mt-lg">
+            <h3 className="mb-sm text-sm font-semibold uppercase tracking-wide text-text-muted">
+              Areas of Interest
+            </h3>
+            <InterestList interests={INTERESTS} />
+          </div>
+        </motion.div>
+
+        {/* Education */}
+        <motion.div variants={fadeInUp} className="md:col-span-2">
+          <EducationCard {...EDUCATION[0]} />
+        </motion.div>
+
+        {/* 2x2 stat grid filling the remaining bento cell */}
+        <motion.div variants={fadeInUp} className="grid grid-cols-2 gap-md md:col-span-2">
+          {ABOUT_STATS.map((stat) => (
+            <StatCard key={stat.label} {...stat} />
+          ))}
+        </motion.div>
       </motion.div>
     </Section>
   );
-};
+}
 
 export default About;
