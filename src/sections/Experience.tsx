@@ -5,6 +5,7 @@ import SectionTitle from "@/components/common/SectionTitle";
 import { EXPERIENCE } from "@/data/experience";
 import { staggerContainer } from "@/lib/animations";
 import TimelineItem from "@/components/experience/TimelineItem";
+// import ActivityGraph from "@/components/experience/ActivityGraph";
 
 const Experience: FC = () => {
   return (
@@ -14,6 +15,10 @@ const Experience: FC = () => {
         title="Where I've worked"
         description="A timeline of the companies and roles that shaped my engineering experience."
       />
+
+      {/* <div className="mx-auto mb-2xl max-w-3xl">
+        <ActivityGraph />
+      </div> */}
 
       <motion.div
         variants={staggerContainer}

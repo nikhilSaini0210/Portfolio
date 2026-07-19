@@ -86,3 +86,9 @@ export interface BurstParticle {
   maxLife: number;
   size: number;
 }
+
+export interface ActivityMonth {
+  month: string;
+  intensity: 0 | 1 | 2 | 3 | 4;
+  label: string;
+}

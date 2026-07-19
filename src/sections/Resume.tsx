@@ -3,11 +3,9 @@ import SectionTitle from "@/components/common/SectionTitle";
 import AchievementList from "@/components/resume/AchievementList";
 import CertificationCard from "@/components/resume/CertificationCard";
 import ResumePreview from "@/components/resume/ResumePreview";
-import Button from "@/components/ui/Button";
-import { CERTIFICATIONS, KEY_ACHIEVEMENTS, RESUME_FILE_PATH } from "@/data/resume";
-import { fadeInUp, staggerContainer } from "@/lib/animations";
+import { CERTIFICATIONS, KEY_ACHIEVEMENTS } from "@/data/resume";
+import { staggerContainer } from "@/lib/animations";
 import { motion } from "framer-motion";
-import { Download } from "lucide-react";
 import type { FC } from "react";
 
 const Resume: FC = () => {
@@ -28,14 +26,6 @@ const Resume: FC = () => {
           className="lg:col-span-2"
         >
           <ResumePreview />
-          <motion.div variants={fadeInUp} className="mt-lg">
-            <a href={RESUME_FILE_PATH} download className="block">
-              <Button variant="primary" size="lg" className="w-full">
-                <Download className="h-4 w-4" aria-hidden="true" />
-                Download Resume
-              </Button>
-            </a>
-          </motion.div>
         </motion.div>
 
         <div className="lg:col-span-3">
