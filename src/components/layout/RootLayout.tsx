@@ -1,6 +1,6 @@
 import type { FC, ReactNode } from "react";
 import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Footer from "../footer/Footer";
 import ScrollToTop from "./ScrollToTop";
 import ScrollProgressBar from "./ScrollProgressBar";
 import SkipLink from "../common/SkipLink";

@@ -9,6 +9,7 @@ export interface SocialLink {
 export interface NavLink {
   label: string;
   href: string;
+  icon: LucideIcon;
 }
 
 export interface Stat {

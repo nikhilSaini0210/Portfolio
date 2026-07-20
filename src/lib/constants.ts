@@ -1,5 +1,5 @@
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { Mail } from "lucide-react";
+import { Briefcase, FileText, FolderGit2, Home, Mail, Sparkles, User } from "lucide-react";
 import type { NavLink } from "@/types/common.types";
 
 export const iconMap = {
@@ -12,13 +12,13 @@ export const iconMap = {
 export const THEME_STORAGE_KEY = "p-theme";
 
 export const NAV_LINKS: NavLink[] = [
-  { label: "Home", href: "hero" },
-  { label: "About", href: "about" },
-  { label: "Skills", href: "skills" },
-  { label: "Projects", href: "projects" },
-  { label: "Experience", href: "experience" },
-  { label: "Resume", href: "resume" },
-  { label: "Contact", href: "contact" },
+  { label: "Home", href: "hero", icon: Home },
+  { label: "About", href: "about", icon: User },
+  { label: "Skills", href: "skills", icon: Sparkles },
+  { label: "Projects", href: "projects", icon: FolderGit2 },
+  { label: "Experience", href: "experience", icon: Briefcase },
+  { label: "Resume", href: "resume", icon: FileText },
+  { label: "Contact", href: "contact", icon: Mail },
 ];
 
 export const SITE_CONFIG = {

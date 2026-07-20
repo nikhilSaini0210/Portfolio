@@ -1,8 +1,9 @@
-import type { FC } from "react";
-import Container from "../common/Container";
 import { NAV_LINKS, SITE_CONFIG } from "@/lib/constants";
-import SocialIcons from "../common/SocialIcons";
 import { scrollToSection } from "@/lib/helpers";
+import Container from "@/components/common/Container";
+import SocialIcons from "@/components/common/SocialIcons";
+import type { FC } from "react";
+import Signature from "./Signature";
 
 const Footer: FC = () => {
   const year = new Date().getFullYear();
@@ -41,7 +42,8 @@ const Footer: FC = () => {
           />
         </div>
 
-        <div className="mt-xl border-t border-border pt-lg text-center">
+        <div className="mt-xl flex flex-col items-center gap-md border-t border-border pt-lg">
+          <Signature />
           <p className="text-sm text-text-muted">
             © {year} {SITE_CONFIG.name}. All rights reserved.
           </p>
