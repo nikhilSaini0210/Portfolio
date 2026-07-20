@@ -30,6 +30,7 @@ export interface SkillCategory {
   title: string;
   icon: LucideIcon;
   skills: string[];
+  color: "hue-1" | "hue-2" | "hue-3" | "hue-4" | "hue-5" | "hue-6";
 }
 
 export interface Project {

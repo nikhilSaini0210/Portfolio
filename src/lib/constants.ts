@@ -32,3 +32,13 @@ export const SITE_CONFIG = {
 };
 
 export const SCROLL_OFFSET = 80;
+
+export const HUES = ["hue-1", "hue-2", "hue-3", "hue-4", "hue-5", "hue-6"];
+
+export const hashToHue = (str: string): string => {
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    hash = str.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  return HUES[Math.abs(hash) % HUES.length];
+};

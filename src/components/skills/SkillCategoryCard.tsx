@@ -1,10 +1,10 @@
-import { revealScale } from "@/lib/animations";
-import type { SkillCategory } from "@/types/common.types";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useRef, type FC, type MouseEvent } from "react";
-import Badge from "../ui/Badge";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import Badge from "@/components/ui/Badge";
+import { fadeInUp } from "@/lib/animations";
+import type { SkillCategory } from "@/types/common.types";
 
-const SkillCategoryCard: FC<SkillCategory> = ({ title, icon: Icon, skills }) => {
+const SkillCategoryCard: FC<SkillCategory> = ({ title, icon: Icon, skills, color }) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -20,20 +20,20 @@ const SkillCategoryCard: FC<SkillCategory> = ({ title, icon: Icon, skills }) => 
   const glowX = useTransform(mouseX, [-0.5, 0.5], ["20%", "80%"]);
   const glowY = useTransform(mouseY, [-0.5, 0.5], ["20%", "80%"]);
 
-  const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
+  function handleMouseMove(e: MouseEvent<HTMLDivElement>) {
     const rect = cardRef.current?.getBoundingClientRect();
     if (!rect) return;
     mouseX.set((e.clientX - rect.left) / rect.width - 0.5);
     mouseY.set((e.clientY - rect.top) / rect.height - 0.5);
-  };
+  }
 
-  const handleMouseLeave = () => {
+  function handleMouseLeave() {
     mouseX.set(0);
     mouseY.set(0);
-  };
+  }
 
   return (
-    <motion.div variants={revealScale} style={{ perspective: 800 }}>
+    <motion.div variants={fadeInUp} style={{ perspective: 800 }}>
       <motion.div
         ref={cardRef}
         onMouseMove={handleMouseMove}
@@ -44,15 +44,32 @@ const SkillCategoryCard: FC<SkillCategory> = ({ title, icon: Icon, skills }) => 
         <motion.div
           className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
           style={{
-            background: `radial-gradient(circle at ${glowX} ${glowY}, color-mix(in srgb, var(--color-primary) 15%, transparent) 0%, transparent 60%)`,
+            background: `radial-gradient(circle at ${glowX} ${glowY}, color-mix(in srgb, var(--color-${color}) 18%, transparent) 0%, transparent 60%)`,
           }}
+        />
+
+        {/* Top accent bar in the category's color */}
+        <div
+          className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100"
+          style={{ backgroundColor: `var(--color-${color})` }}
         />
 
         <div className="relative" style={{ transform: "translateZ(20px)" }}>
           <div className="mb-md flex items-center gap-sm">
-            <div className="bg-primary/10 relative flex h-11 w-11 shrink-0 items-center justify-center rounded-md text-primary transition-transform duration-300 group-hover:scale-110">
+            <div
+              className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-md transition-transform duration-300 group-hover:scale-110"
+              style={{
+                backgroundColor: `color-mix(in srgb, var(--color-${color}) 15%, transparent)`,
+                color: `var(--color-${color})`,
+              }}
+            >
               <Icon className="h-5 w-5" aria-hidden="true" />
-              <div className="bg-primary/20 absolute inset-0 rounded-md opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-100" />
+              <div
+                className="absolute inset-0 rounded-md opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-100"
+                style={{
+                  backgroundColor: `color-mix(in srgb, var(--color-${color}) 30%, transparent)`,
+                }}
+              />
             </div>
             <h3 className="font-display text-lg font-semibold text-text-primary">{title}</h3>
           </div>

@@ -30,6 +30,14 @@ const config: Config = {
         success: "var(--color-success)",
         warning: "var(--color-warning)",
         error: "var(--color-error)",
+        hue: {
+          1: "var(--color-hue-1)",
+          2: "var(--color-hue-2)",
+          3: "var(--color-hue-3)",
+          4: "var(--color-hue-4)",
+          5: "var(--color-hue-5)",
+          6: "var(--color-hue-6)",
+        },
       },
       fontFamily: {
         sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],

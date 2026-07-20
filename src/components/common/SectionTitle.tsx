@@ -13,7 +13,7 @@ const SectionTitle: FC<SectionTitleProps> = ({ label, title, description, align,
   return (
     <div className={cn("mb-xl max-w-2xl", align === "center" && "mx-auto text-center", className)}>
       {label && (
-        <span className="mb-sm inline-block font-mono text-sm font-medium tracking-wide text-accent">
+        <span className="mb-sm inline-block bg-gradient-to-r from-hue-2 via-primary to-hue-4 bg-clip-text font-mono text-sm font-medium tracking-wide text-transparent">
           {label}
         </span>
       )}
