@@ -13,6 +13,7 @@ import HeroAvatar from "@/components/hero/HeroAvatar";
 import MagneticButton from "@/components/ui/MagneticButton";
 import ParticleField from "@/components/hero/ParticleField";
 import SplitText from "@/components/hero/SplitText";
+import TypewriterText from "@/components/hero/TypewriterText";
 
 const Hero: FC = () => {
   return (
@@ -58,6 +59,17 @@ const Hero: FC = () => {
           <motion.p variants={fadeInUp} className="max-w-xl text-base text-text-muted sm:text-lg">
             2.8+ years building scalable SaaS platforms, real-time systems, and fintech applications
             with Node.js, React.js, and React Native.
+          </motion.p>
+
+          <motion.p variants={fadeInUp} className="max-w-xl text-base text-text-muted sm:text-lg">
+            <TypewriterText
+              phrases={[
+                "Building scalable SaaS platforms with Node.js & React.",
+                "Crafting real-time systems with WebRTC & Socket.io.",
+                "Shipping fintech apps with React Native.",
+                "Turning complex problems into clean, fast UI.",
+              ]}
+            />
           </motion.p>
 
           <motion.div

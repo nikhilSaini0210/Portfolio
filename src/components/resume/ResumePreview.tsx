@@ -18,15 +18,12 @@ const ResumePreview: FC = () => {
         whileHover={{ scale: 1.015 }}
         onClick={() => setIsFlipped((prev) => !prev)}
       >
-        {/* Ambient amber glow behind the card */}
         <div className="bg-primary/30 absolute -inset-6 -z-10 rounded-2xl opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
 
-        {/* FRONT */}
         <div
           className="border-primary/25 group-hover:border-primary/50 relative h-full w-full overflow-hidden rounded-xl border-2 bg-surface shadow-lg transition-colors duration-300"
           style={{ backfaceVisibility: "hidden" }}
         >
-          {/* Blurred PDF background, tinted with theme */}
           <div className="absolute inset-0 overflow-hidden">
             <iframe
               src={`${RESUME_FILE_PATH}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`}
@@ -36,7 +33,6 @@ const ResumePreview: FC = () => {
               className="pointer-events-none absolute left-1/2 top-1/2 h-[130%] w-[130%] -translate-x-1/2 -translate-y-1/2 select-none opacity-70"
               style={{ filter: "blur(3px) brightness(0.55) contrast(1.1)" }}
             />
-            {/* Radial vignette: dark center for text legibility, lighter edges so PDF shows */}
             <div
               className="absolute inset-0"
               style={{
@@ -48,15 +44,12 @@ const ResumePreview: FC = () => {
             <div className="from-primary/10 absolute inset-0 bg-gradient-to-br to-transparent" />
           </div>
 
-          {/* PDF tag, top-left — accent teal for contrast against amber */}
           <span className="border-accent/40 bg-accent/10 absolute left-md top-md inline-flex items-center gap-1 rounded-full border px-sm py-[2px] text-[11px] font-semibold tracking-wide text-accent">
             PDF
           </span>
 
-          {/* Shine sweep on hover */}
           <div className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-1000 ease-out group-hover:translate-x-full" />
 
-          {/* Foreground content */}
           <div className="relative flex h-full w-full flex-col items-center justify-center gap-md p-lg">
             <div className="bg-primary/15 border-primary/50 flex h-16 w-16 items-center justify-center rounded-2xl border-2 text-primary shadow-sm">
               <FileText className="h-7 w-7" aria-hidden="true" />
@@ -76,7 +69,6 @@ const ResumePreview: FC = () => {
           </div>
         </div>
 
-        {/* BACK */}
         <div
           className="border-primary/25 absolute inset-0 flex flex-col items-center justify-center gap-lg overflow-hidden rounded-xl border-2 bg-surface p-lg text-center shadow-lg"
           style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}

@@ -5,7 +5,7 @@ import Card from "../ui/Card";
 
 const CertificationCard: FC<Certification> = ({ name, issuer, date, credentialUrl }) => {
   return (
-    <Card className="flex items-start gap-md">
+    <Card spotlight className="flex items-start gap-md">
       <div className="bg-success/10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-success">
         <BadgeCheck className="h-5 w-5" aria-hidden="true" />
       </div>

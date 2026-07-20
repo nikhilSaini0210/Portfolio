@@ -112,7 +112,6 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
     return () => clearInterval(interval);
   }, [isHovered, hasMultipleImages, isZoomed, project.images.length]);
 
-  // Keyboard nav + escape while zoomed
   useEffect(() => {
     if (!isZoomed) return;
 
@@ -140,7 +139,10 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
           onMouseLeave={handleMouseLeave}
           style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
         >
-          <Card className="group relative flex h-full flex-col overflow-hidden p-0 transition-shadow duration-300 hover:shadow-xl">
+          <Card
+            spotlight
+            className="group relative flex h-full flex-col overflow-hidden p-0 transition-shadow duration-300 hover:shadow-xl"
+          >
             <div
               className="relative aspect-video w-full touch-pan-y overflow-hidden bg-bg-secondary"
               onTouchStart={handleTouchStart}
@@ -163,12 +165,10 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
               </AnimatePresence>
               <div className="from-bg-primary/40 pointer-events-none absolute inset-0 bg-gradient-to-t via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
-              {/* Zoom hint icon */}
               <div className="pointer-events-none absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full bg-black/40 text-white opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100">
                 <ZoomIn className="h-4 w-4" aria-hidden="true" />
               </div>
 
-              {/* Desktop prev/next arrows - hidden on touch, shown on card hover */}
               {hasMultipleImages && (
                 <>
                   <button
@@ -289,7 +289,6 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
         </motion.div>
       </motion.div>
 
-      {/* Fullscreen zoom lightbox */}
       <AnimatePresence>
         {isZoomed && (
           <motion.div

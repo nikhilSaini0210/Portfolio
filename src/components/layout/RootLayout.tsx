@@ -8,6 +8,7 @@ import CursorGlow from "../common/CursorGlow";
 import GrainOverlay from "../common/GrainOverlay";
 import BurstLayer from "../common/BurstLayer";
 import CursorDot from "../common/CursorDot";
+import CommandPalette from "../common/CommandPalette";
 
 interface RootLayoutProps {
   children: ReactNode;
@@ -20,6 +21,7 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => {
       <CursorGlow />
       <CursorDot />
       <BurstLayer />
+      <CommandPalette />
       <SkipLink />
       <ScrollProgressBar />
       <Navbar />

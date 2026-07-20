@@ -50,6 +50,7 @@ const TimelineItem: FC<TimelineItemProps> = ({ item, isLast, index }) => {
 
       <Card
         hoverEffect
+        spotlight
         className="mb-2xl flex-1 cursor-pointer"
         onClick={() => setExpanded((prev) => !prev)}
       >

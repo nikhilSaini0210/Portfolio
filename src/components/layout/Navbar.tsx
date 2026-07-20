@@ -77,6 +77,9 @@ const Navbar: FC = () => {
 
           <div className="hidden items-center gap-md md:flex">
             <ThemeToggle />
+            <kbd className="rounded border border-border px-2 py-1 font-mono text-xs text-text-muted">
+              ⌘K
+            </kbd>
           </div>
 
           <div className="flex items-center gap-sm md:hidden">
